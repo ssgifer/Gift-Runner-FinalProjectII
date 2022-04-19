@@ -1,0 +1,41 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class HealthBar : MonoBehaviour
+{
+    public Slider slider;
+    //public Gradient gradient;
+    //public Image fill;
+    public int currentHealth;
+    //public GameObject DeathMenu;
+
+    public void SetMaxHealth(int health)
+    {
+        slider.maxValue = health;
+        slider.value = health;
+
+        //fill.color = gradient.Evaluate(1f);
+    }
+
+    // Start is called before the first frame update
+
+    public void SetHealth(int health)
+    {
+        slider.value = health;
+        //fill.color = gradient.Evaluate(slider.Value);
+    }
+
+    /*void Update()
+    {
+        if (currentHealth == 0)
+        {
+            DeathMenu.SetActive(true);
+        }
+    }*/
+
+}
+
+
